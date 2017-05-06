@@ -1,0 +1,13 @@
+.DS_Store
+
+*.swp
+*.swn
+*.swm
+*.swo
+*.pyc
+*.log
+
+__pycache__/
+.cache/
+_trial_temp/
+SmokeTest/filetrans/recv.bin
