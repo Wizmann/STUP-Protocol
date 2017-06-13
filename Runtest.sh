@@ -1,3 +1,8 @@
 #!/bin/bash
-cd src
-py.test
+if [[ "$1" == "-u" ]]
+then
+  shift
+  python -m unittest discover $@
+else
+  py.test $@
+fi
