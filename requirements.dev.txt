@@ -1,0 +1,11 @@
+Twisted
+bitstruct
+decorator
+greenlet
+py
+pycrypto
+pytest
+pytest-twisted
+recommonmark
+sphinx
+zope.interface

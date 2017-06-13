@@ -1,0 +1,18 @@
+#!/usr/bin/env python
+#
+from __future__ import absolute_import
+
+import os
+import sys
+from twisted.internet import protocol, reactor
+
+sys.path.insert(0, os.path.abspath('src/python'))
+
+from stup import config as Config
+import stup.server
+
+reactor.listenUDP(Config.SERVER_PORT, stup.server.StupServerFactoryProtocol())
+
+print("Server ready to go!")
+
+reactor.run()

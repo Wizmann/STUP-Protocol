@@ -29,7 +29,7 @@ class StupOutgoing(StupClientProtocol):
         self.socks5.connectionLost(msg)
         super(StupOutgoing, self).cleanUp()
 
-class Socks5AdapterProtocol(object, protocol.Protocol):
+class Socks5AdapterProtocol(protocol.Protocol, object):
     @defer.inlineCallbacks
     def connectionMade(self):
         serveraddr = (Config.SERVER_ADDR, Config.SERVER_PORT)

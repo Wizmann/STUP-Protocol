@@ -1,8 +1,15 @@
 language: python
 python:
   - "2.7"
+  - "3.3"
+  - "3.4"
+  - "3.5"
 install:
   - sudo apt-get -qq update
   - sudo apt-get install -y python-dev python-pip
-  - pip install -r requirements.txt
-script: py.test
+  - pip install -r requirements.dev.txt
+script:
+  - py.test
+  - ./Gendocs
+  - test -d docs
+

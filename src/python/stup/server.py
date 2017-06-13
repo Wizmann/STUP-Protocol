@@ -1,4 +1,7 @@
 #coding=utf-8
+"""
+This is a server module
+"""
 from __future__ import absolute_import
 
 import time
@@ -9,10 +12,25 @@ from stup.protocol.server import StupServerProtocol
 from stup.third.party.socks5 import SOCKSv5
 
 class StupTransportAdapter(object):
+    """
+    This is a Hello class docstring
+    """
+
     def __init__(self, stup):
+        """
+        This is an __init__ method docstring.
+
+        Creates a new :class:`StupTransportAdapter` instance.
+
+        :param stup: something
+        :type stup: str
+        """
         self.stup = stup
 
     def write(self, buf):
+        """
+        This is a _write method decorator
+        """
         logging.debug("StupTransportAdapter send %d bytes" % len(buf))
         self._write(buf, 0.5)
 

@@ -1,0 +1,7 @@
+Twisted
+bitstruct
+decorator
+greenlet
+py
+pycrypto
+zope.interface

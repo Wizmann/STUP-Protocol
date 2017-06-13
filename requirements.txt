@@ -1,9 +1,0 @@
-decorator==4.0.10
-greenlet==0.4.10
-py==1.4.31
-pytest==2.9.2
-pytest-twisted==1.5
-Twisted==16.2.0
-zope.interface==4.2.0
-bitstruct==3.1.0
-pycrypto==2.6.1
