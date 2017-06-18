@@ -1,0 +1,100 @@
+[MASTER]
+
+# Profiled execution.
+profile=no
+
+
+[MESSAGES CONTROL]
+
+
+[REPORTS]
+
+# Set the output format. Available formats are text, parseable, colorized, msvs
+# (visual studio) and html
+output-format=text
+
+# Tells whether to display a full report or only the messages
+reports=no
+
+# Include message's id in output
+msg-template={msg_id}:{line} {msg}
+
+[FORMAT]
+
+# String used as indentation unit. This is usually " " (4 spaces) or "\t" (1
+# tab).
+indent-string='    '
+
+# Maximum number of characters on a single line.
+# In Twisted projects, Lines are flowed at 79 columns.
+max-line-length=79
+
+[MISCELLANEOUS]
+
+
+[VARIABLES]
+
+
+[TYPECHECK]
+
+# List of classes names for which member attributes should not be checked
+# (useful for classes with attributes dynamically set).
+ignored-classes=twisted.internet.reactor,ephem
+
+
+[BASIC]
+
+# Regular expression which should only match correct module names
+# Modules must be named in all lower-case, or separated by underscores.
+module-rgx=(([a-z_][a-z0-9_]*))$
+
+# Default checker will accept all method names, but they are validated in a
+# custom checker.
+method-rgx=
+
+# Function names should be same as method names.
+
+function-rgx=((([a-z])|([a-z]+_[a-z]))[a-zA-Z0-9]+)$|(__[a-z]+__)$|(\_.+)$|(test\_.+)$
+
+# Regular expression which should only match correct instance attribute names
+# Attribute names should be in mixed case, with the first letter lower case,
+# each word separated by having its first letter capitalized just like method names.
+# And all private names should begin with an underscore.
+attr-rgx=(((([a-z_])|([a-z]+_[a-z]))[a-zA-Z0-9]+)|(([A-Z_][A-Z0-9_]*))|(__[a-zA-Z0-9][a-zA-Z0-9_]*[a-zA-Z0-9]+__)|(__[a-zA-Z0-9]__))$
+
+# Classes are to be named in mixed case, with the first letter capitalized,
+# each word separated by having its first letter capitalized.
+class-rgx=(_{0,1})([A-Z][a-zA-Z0-9]+)$
+
+# Regular expression which should only match correct variable names
+# good variable names:
+# f, foo, _foo, fooBar
+# bad variable names:
+# FooBar, Foo, FOO, foo_bar
+variable-rgx=([a-z_][a-zA-Z0-9]*)$
+
+# Constant names.
+# Constants in principle should named in style of FOO_BAR or FOOBAR.
+# But in Twisted, many constants are named in style of variable names or
+# class names, so just make sure they are valid.
+const-rgx=(([A-Z_][A-Z0-9_]*)|(__.*__)|([a-z_][a-zA-Z0-9]+)|([A-Z][a-zA-Z0-9]+))$
+
+argument-rgx=([a-z_][a-zA-Z0-9]*)$
+
+
+[SIMILARITIES]
+
+
+[IMPORTS]
+
+
+[DESIGN]
+
+
+[CLASSES]
+
+[TWISTEDCHECKER]
+check-python3 = yes
+
+# Disable consistent indentation constraint for docstring
+disable = W9206
